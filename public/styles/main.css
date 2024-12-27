@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background-color: #C5E4E7;
+    background-color: #FFFFFF;
     height: 80px;
     padding: 0 5%;
     position: fixed;
@@ -29,7 +29,7 @@ header {
 .logo {
     font-size: 24px;
     text-decoration: none;
-    color: #000000;
+    color: #f30707;
 }
 
 nav a {
@@ -48,6 +48,7 @@ nav a {
     align-items: center;
     text-align: center;
     gap: 20px;
+    background-color: #f7f4e9
 }
 
 .profile-image {
@@ -87,8 +88,8 @@ nav a {
 
 .contact-button {
     display: inline-block;
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #e71212d1;
     padding: 8px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -108,8 +109,10 @@ nav a {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
+    max-width: 1200px; /* 設定最大寬度 */
+    margin: 0 auto; /* 水平置中 */
 }
 
 .service-card {
@@ -119,6 +122,10 @@ nav a {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    align-items: center; /* 垂直置中 */
+    text-align: center; /* 文字置中 */
+    margin: 0 auto; /* 確保卡片本身也是置中的 */
+    max-width: 500px; /* 設定卡片最大寬度 */
 }
 
 .service-card img {
@@ -143,7 +150,7 @@ nav a {
 
 .service-content a {
     display: inline-block;
-    background-color: #000000;
+    background-color: #e71212d1;
     color: #FFFFFF;
     padding: 8px 20px;
     border-radius: 5px;
@@ -152,19 +159,30 @@ nav a {
 
 /* Contact Section */
 .contact {
-    padding: 40px 10%;
+    padding: 40px 0; /* 移除左右padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平置中 */
+    justify-content: center;
+    width: 100%;
 }
 
 .contact h2 {
-    text-align: center;
+
     font-size: 24px;
     margin-bottom: 40px;
+
+
 }
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(1, 1fr);
     gap: 40px;
+    width: 100%;
+    max-width: 800px;  /* 控制最大寬度 */
+    margin: 0 auto;    /* 水平置中 */
+    padding: 0 20px;
 }
 
 .contact-form {
@@ -196,7 +214,7 @@ nav a {
 }
 
 .submit-button {
-    background-color: #000000;
+    background-color: #e71212d1;
     color: #FFFFFF;
     padding: 10px 20px;
     border: none;
@@ -229,9 +247,13 @@ footer {
     
     .service-grid {
         grid-template-columns: 1fr;
+        padding: 0 20px; /* 增加左右間距 */
     }
     
     .contact-container {
         grid-template-columns: 1fr;
+    }
+    .service-card {
+        width: 100%;
     }
 }
