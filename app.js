@@ -22,13 +22,13 @@ app.get('/', async (req, res) => {
 
         // 將服務資料傳遞給 EJS 模板
         res.render('index', {
-            title: 'Emily Wang - 職涯規劃顧問',
+            title: '太子登雞 - 連鎖加盟店',
             services: services  // 傳遞從 API 取得的服務資料
         });
     } catch (err) {
         console.error('錯誤:', err);
         res.render('index', {
-            title: 'Emily Wang - 職涯規劃顧問',
+            title: '太子登雞 - 連鎖加盟店',
             services: []  // 如果有錯誤，則傳遞空資料
         });
     }
