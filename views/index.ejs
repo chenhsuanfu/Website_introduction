@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <section class="info">
+        <div class="profile-image">
+            <img src="/images/profile.jpg" alt="Emily Wang">
+        </div>
+        <div class="profile-info">
+            <h1>Emily Wang</h1>
+            <p>助你看見前路並立刻採取行動的職涯規劃導師</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/youtube.svg" alt="YouTube"></a>
+            </div>
+            <p>emily.wang@contact.com</p>
+            <a href="#contact" class="contact-button">與我聯繫</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>我的服務</h2>
+        <div class="service-grid">
+            <% services.forEach(service => { %>
+                <div class="service-card">
+                    <img src="<%= service.image %>" alt="<%= service.title %>">
+                    <div class="service-content">
+                        <h3><%= service.title %></h3>
+                        <p><%= service.description %></p>
+                        <a href="#">了解更多</a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+
+    <%- include('partials/contact') %>
+    <%- include('partials/footer') %>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
